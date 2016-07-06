@@ -11,6 +11,11 @@ fonoapi.token = fonoToken;
 
 var devices;
 
+bot.onText(/\/device$/, function (msg) {
+    var fromId = msg.chat.id;
+    bot.sendMessage(fromId, "Please specify search criteria, e.g. /device nokia e51");
+});
+
 bot.onText(/\/device (.+)/, function (msg, match) {
     var fromId = msg.chat.id;
     var query  = match[1];

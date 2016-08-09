@@ -1,11 +1,11 @@
 // set up Telegram bot
 var TelegramBot = require('node-telegram-bot-api');
-var botToken    = '';
+var botToken    = process.env.MOB_TG_TOKEN;
 var bot         = new TelegramBot(botToken, {polling: true});
 
 // set up fonoAPI 
 var fonoapi   = require('fonoapi-nodejs');
-var fonoToken = '';
+var fonoToken = process.env.MOB_API_TOKEN;
 fonoapi.token = fonoToken;
 
 
